@@ -29,7 +29,7 @@ public class AccountController {
     }
     @RequestMapping("/save")
     public void save(Account account, HttpServletRequest request, HttpServletResponse response) throws Exception {
-        System.out.println("表现层：保存账户信息。。。");
+        System.out.println("表现层：保存了账户信息。。。");
         accountService.saveAccount(account);
         response.sendRedirect(request.getContextPath()+"/account/findAll");
     }
